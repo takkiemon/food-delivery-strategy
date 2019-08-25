@@ -141,6 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79a84386f9cedb94b8a8038e77fed825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapHeight: 5
+  mapWidth: 5
+  positionAmplifier: 4
+  minimumAmplifier: 1
 --- !u!4 &905300805
 Transform:
   m_ObjectHideFlags: 0
