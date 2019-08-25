@@ -28,18 +28,30 @@ public class MapGridBehavior : MonoBehaviour
     public void CreateGrid(int width, int height)
     {
         gridMapArray = new GridCell[mapWidth, mapHeight];
-
-        for (int y = 0; y < height; y++)
+        if (gridIsStanding)
         {
-            for (int x = 0; x < width; x++)
+            for (int y = 0; y < height; y++)
             {
-                if (!gridIsStanding)
+                for (int x = 0; x < width; x++)
+                {
+                    if (!gridIsStanding)
+                    {
+                        gridMapArray[x, y] = new GridCell(x, 0, y);
+                    }
+                    else
+                    {
+                        gridMapArray[x, y] = new GridCell(x, y);
+                    }
+                }
+            }
+        }
+        else
+        {
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
                 {
                     gridMapArray[x, y] = new GridCell(x, 0, y);
-                }
-                else
-                {
-                    gridMapArray[x, y] = new GridCell(x, y);
                 }
             }
         }

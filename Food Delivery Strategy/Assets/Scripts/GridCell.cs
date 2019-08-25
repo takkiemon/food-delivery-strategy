@@ -7,6 +7,7 @@ public class GridCell
     public int X;
     public int Y;
     public int Z;
+    public bool cellIsStanding;
 
     public GridCell()
     {
